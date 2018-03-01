@@ -63,7 +63,7 @@
     <xs:complexType name="WidgetGroup">
         <xs:complexContent mixed="true">
             <xs:extension base="gdx:Widget">
-                <xs:group maxOccurs="unbounded" minOccurs="0" ref="any-view"/>
+                <xs:group maxOccurs="unbounded" minOccurs="0" ref="gdx:any-view"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
