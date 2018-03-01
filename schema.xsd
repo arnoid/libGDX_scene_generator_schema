@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xs:schema
-        vc:minVersion="1.0"
+        vc:minVersion="1.1"
         vc:maxVersion="1.1"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
