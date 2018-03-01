@@ -4,7 +4,6 @@
         vc:maxVersion="1.1"
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-        targetNamespace='https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd'
         xmlns:gdx='https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd'>
     <xs:group name="any-view">
         <xs:choice>
