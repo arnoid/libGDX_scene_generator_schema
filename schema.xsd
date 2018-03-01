@@ -4,7 +4,9 @@
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
            vc:maxVersion="1.1"
-           vc:minVersion="1.0">
+           vc:minVersion="1.0"
+           attributeFormDefault="unqualified"
+           elementFormDefault="qualified">
 
     <xs:element name="Button" type="gdx:Widget"/>
     <xs:element name="CheckBox" type="gdx:Widget"/>
