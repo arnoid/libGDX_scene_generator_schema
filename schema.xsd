@@ -58,13 +58,13 @@
     <xs:element name="Touchpad"/>
     <xs:element name="Tree"/>
     <xs:element name="VerticalGroup"/>
-    <xs:element name="Widget" type="Widget"/>
-    <xs:element name="WidgetGroup" type="WidgetGroup"/>
+    <xs:element name="Widget" type="gdx:Widget"/>
+    <xs:element name="WidgetGroup" type="gdx:WidgetGroup"/>
     <xs:element name="Window"/>
 
     <xs:complexType name="WidgetGroup">
         <xs:complexContent mixed="true">
-            <xs:extension base="Widget">
+            <xs:extension base="gdx:Widget">
                 <xs:group maxOccurs="unbounded" minOccurs="0" ref="any-view"/>
             </xs:extension>
         </xs:complexContent>
@@ -81,7 +81,7 @@
         <xs:attribute name="width" type="xs:float" use="required"/>
         <xs:attribute name="originX" type="xs:float"/>
         <xs:attribute name="originY" type="xs:float"/>
-        <xs:attribute name="originAlign" type="AlignEnum"/>
+        <xs:attribute name="originAlign" type="gdx:AlignEnum"/>
         <xs:attribute name="x" type="xs:float"/>
         <xs:attribute name="y" type="xs:float"/>
         <xs:attribute name="z" type="xs:integer"/>
@@ -89,7 +89,7 @@
         <xs:attribute name="pack" type="xs:boolean"/>
         <xs:attribute name="fillParent" type="xs:boolean"/>
         <xs:attribute name="visible" type="xs:boolean"/>
-        <xs:attribute name="touchable" type="TouchableEnum"/>
+        <xs:attribute name="touchable" type="gdx:TouchableEnum"/>
     </xs:complexType>
 
     <xs:simpleType final="restriction" name="TouchableEnum">
