@@ -9,7 +9,6 @@
     <xs:group name="any-view">
         <xs:choice>
             <xs:element ref="Button"/>
-            <xs:element ref="ButtonGroup"/>
             <xs:element ref="CheckBox"/>
             <xs:element ref="Container"/>
             <xs:element ref="Dialog"/>
@@ -20,7 +19,7 @@
             <xs:element ref="ProgressBar"/>
             <xs:element ref="ScrollPane"/>
             <xs:element ref="SelectBox"/>
-            <xs:element ref="SliderActor"/>
+            <xs:element ref="Slider"/>
             <xs:element ref="SplitPane"/>
             <xs:element ref="Stack"/>
             <xs:element ref="Table"/>
@@ -36,36 +35,35 @@
         </xs:choice>
     </xs:group>
 
-    <xs:element name="Button"/>
-    <xs:element name="ButtonGroup"/>
-    <xs:element name="CheckBox"/>
-    <xs:element name="Container"/>
-    <xs:element name="Dialog"/>
-    <xs:element name="HorizontalGroup"/>
-    <xs:element name="Image"/>
-    <xs:element name="ImageButton"/>
-    <xs:element name="Label"/>
-    <xs:element name="ProgressBar"/>
-    <xs:element name="ScrollPane"/>
-    <xs:element name="SelectBox"/>
-    <xs:element name="SliderActor"/>
-    <xs:element name="SplitPane"/>
-    <xs:element name="Stack"/>
-    <xs:element name="Table"/>
-    <xs:element name="TextArea"/>
-    <xs:element name="TextButton"/>
-    <xs:element name="TextField"/>
-    <xs:element name="Touchpad"/>
-    <xs:element name="Tree"/>
-    <xs:element name="VerticalGroup"/>
+    <xs:element name="Button" type="gdx:Widget"/>
+    <xs:element name="CheckBox" type="gdx:Widget"/>
+    <xs:element name="Container" type="gdx:WidgetGroup"/>
+    <xs:element name="Dialog" type="gdx:WidgetGroup"/>
+    <xs:element name="HorizontalGroup" type="gdx:WidgetGroup"/>
+    <xs:element name="Image" type="gdx:Widget"/>
+    <xs:element name="ImageButton" type="gdx:Widget"/>
+    <xs:element name="Label" type="gdx:Widget"/>
+    <xs:element name="ProgressBar" type="gdx:Widget"/>
+    <xs:element name="ScrollPane" type="gdx:WidgetGroup"/>
+    <xs:element name="SelectBox" type="gdx:Widget"/>
+    <xs:element name="Slider" type="gdx:Widget"/>
+    <xs:element name="SplitPane" type="gdx:WidgetGroup"/>
+    <xs:element name="Stack" type="gdx:WidgetGroup"/>
+    <xs:element name="Table" type="gdx:WidgetGroup"/>
+    <xs:element name="TextArea" type="gdx:Widget"/>
+    <xs:element name="TextButton" type="gdx:Widget"/>
+    <xs:element name="TextField" type="gdx:Widget"/>
+    <xs:element name="Touchpad" type="gdx:Widget"/>
+    <xs:element name="Tree" type="gdx:WidgetGroup"/>
+    <xs:element name="VerticalGroup" type="gdx:WidgetGroup"/>
     <xs:element name="Widget" type="gdx:Widget"/>
     <xs:element name="WidgetGroup" type="gdx:WidgetGroup"/>
-    <xs:element name="Window"/>
+    <xs:element name="Window" type="gdx:WidgetGroup"/>
 
     <xs:complexType name="WidgetGroup">
         <xs:complexContent mixed="true">
             <xs:extension base="gdx:Widget">
-                <xs:group maxOccurs="unbounded" minOccurs="0" ref="gdx:any-view"/>
+                <xs:group maxOccurs="unbounded" minOccurs="0" ref="any-view"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
