@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<xs:schema
-        vc:minVersion="1.0"
-        vc:maxVersion="1.1"
-        xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-        xmlns:gdx='https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd'
-        targetNamespace="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
-        xsi:schemaLocation="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd">
+<xs:schema xmlns:gdx="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
+           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
+           vc:maxVersion="1.1" vc:minVersion="1.0">
     <xs:group name="any-view">
         <xs:choice>
             <xs:element ref="gdx:Button"/>
