@@ -85,7 +85,7 @@
         <xs:attribute name="x" type="xs:float"/>
         <xs:attribute name="y" type="xs:float"/>
         <xs:attribute name="z" type="xs:integer"/>
-        <xs:attribute name="align" type="AlignEnum"/>
+        <xs:attribute name="align" type="gdx:AlignEnum"/>
         <xs:attribute name="pack" type="xs:boolean"/>
         <xs:attribute name="fillParent" type="xs:boolean"/>
         <xs:attribute name="visible" type="xs:boolean"/>
