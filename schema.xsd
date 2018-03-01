@@ -5,7 +5,7 @@
         xmlns:xs="http://www.w3.org/2001/XMLSchema"
         xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
         xmlns:gdx='https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd'
-        targetNamespace="gdx"
+        targetNamespace="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
         elementFormDefault="qualified">
     <xs:group name="any-view">
         <xs:choice>
