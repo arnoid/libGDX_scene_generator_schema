@@ -1,6 +1,7 @@
-<xs:schema attributeFormDefault="unqualified"
-           elementFormDefault="qualified"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema
+        vc:minVersion="1.0" vc:maxVersion="1.1"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning">
     <xs:group name="any-view">
         <xs:choice>
             <xs:element ref="Button"/>
@@ -28,7 +29,6 @@
             <xs:element ref="Widget"/>
             <xs:element ref="WidgetGroup"/>
             <xs:element ref="Window"/>
-            <xs:any/>
         </xs:choice>
     </xs:group>
 
@@ -59,46 +59,44 @@
     <xs:element name="Window"/>
 
     <xs:complexType name="WidgetGroup">
-        <xs:complexContent mixed="false">
+        <xs:complexContent mixed="true">
             <xs:extension base="Widget">
-                <xs:group minOccurs="0" maxOccurs="unbounded" ref="any-view"/>
+                <xs:group maxOccurs="unbounded" minOccurs="0" ref="any-view"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="Widget">
-        <xs:simpleContent>
-            <xs:extension base="xs:string">
-                <xs:attribute type="xs:float" name="rotate"/>
-                <xs:attribute type="xs:float" name="scaleX"/>
-                <xs:attribute type="xs:float" name="scaleY"/>
-                <xs:attribute type="xs:string" name="color"/>
-                <xs:attribute type="xs:boolean" name="debug"/>
-                <xs:attribute type="xs:string" name="name" use="required"/>
-                <xs:attribute type="xs:float" name="height" use="required"/>
-                <xs:attribute type="xs:float" name="width" use="required"/>
-                <xs:attribute type="xs:float" name="originX"/>
-                <xs:attribute type="xs:float" name="originY"/>
-                <xs:attribute type="AlignEnum" name="originAlign"/>
-                <xs:attribute type="xs:float" name="x"/>
-                <xs:attribute type="xs:float" name="y"/>
-                <xs:attribute type="xs:integer" name="z"/>
-                <xs:attribute type="AlignEnum" name="align"/>
-                <xs:attribute type="xs:boolean" name="pack"/>
-                <xs:attribute type="xs:boolean" name="fillParent"/>
-                <xs:attribute type="xs:boolean" name="visible"/>
-                <xs:attribute type="TouchableEnum" name="touchable"/>
-            </xs:extension>
-        </xs:simpleContent>
+        <xs:attribute name="rotate" type="xs:float"/>
+        <xs:attribute name="scaleX" type="xs:float"/>
+        <xs:attribute name="scaleY" type="xs:float"/>
+        <xs:attribute name="color" type="xs:string"/>
+        <xs:attribute name="debug" type="xs:boolean"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="height" type="xs:float" use="required"/>
+        <xs:attribute name="width" type="xs:float" use="required"/>
+        <xs:attribute name="originX" type="xs:float"/>
+        <xs:attribute name="originY" type="xs:float"/>
+        <xs:attribute name="originAlign" type="AlignEnum"/>
+        <xs:attribute name="x" type="xs:float"/>
+        <xs:attribute name="y" type="xs:float"/>
+        <xs:attribute name="z" type="xs:integer"/>
+        <xs:attribute name="align" type="AlignEnum"/>
+        <xs:attribute name="pack" type="xs:boolean"/>
+        <xs:attribute name="fillParent" type="xs:boolean"/>
+        <xs:attribute name="visible" type="xs:boolean"/>
+        <xs:attribute name="touchable" type="TouchableEnum"/>
     </xs:complexType>
-    <xs:simpleType name="TouchableEnum" final="restriction">
+
+    <xs:simpleType final="restriction" name="TouchableEnum">
         <xs:restriction base="xs:string">
             <xs:enumeration value="enabled"/>
             <xs:enumeration value="disabled"/>
             <xs:enumeration value="childrenOnly"/>
         </xs:restriction>
     </xs:simpleType>
-    <xs:simpleType name="AlignEnum" final="restriction">
+
+    <xs:simpleType final="restriction" name="AlignEnum">
         <xs:restriction base="xs:string">
             <xs:enumeration value="top"/>
             <xs:enumeration value="topLeft"/>
@@ -111,4 +109,5 @@
             <xs:enumeration value="bottomRight"/>
         </xs:restriction>
     </xs:simpleType>
+
 </xs:schema>
