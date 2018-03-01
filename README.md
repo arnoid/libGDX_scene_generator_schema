@@ -1,0 +1,1 @@
+# libGDX_scene_generator_schema
