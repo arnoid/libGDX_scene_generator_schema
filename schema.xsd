@@ -6,6 +6,8 @@
            vc:maxVersion="1.1"
            vc:minVersion="1.0"
            attributeFormDefault="unqualified"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
            elementFormDefault="qualified">
 
     <xs:element name="Button" type="gdx:Widget"/>
