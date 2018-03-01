@@ -31,7 +31,7 @@
             <xs:element ref="gdx:Widget"/>
             <xs:element ref="gdx:WidgetGroup"/>
             <xs:element ref="gdx:Window"/>
-            <xs:any processContents="skip"/>
+            <xs:any processContents="lax"/>
         </xs:choice>
     </xs:group>
 
