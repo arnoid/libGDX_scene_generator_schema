@@ -28,6 +28,7 @@
             <xs:element ref="Widget"/>
             <xs:element ref="WidgetGroup"/>
             <xs:element ref="Window"/>
+            <xs:any/>
         </xs:choice>
     </xs:group>
 
@@ -54,8 +55,16 @@
     <xs:element name="Tree"/>
     <xs:element name="VerticalGroup"/>
     <xs:element name="Widget" type="Widget"/>
-    <xs:element name="WidgetGroup"/>
+    <xs:element name="WidgetGroup" type="WidgetGroup"/>
     <xs:element name="Window"/>
+
+    <xs:complexType name="WidgetGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="Widget">
+                <xs:group minOccurs="0" maxOccurs="unbounded" ref="any-view"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="Widget">
         <xs:simpleContent>
