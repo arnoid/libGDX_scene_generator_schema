@@ -8,30 +8,30 @@
         xmlns:gdx='https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd'>
     <xs:group name="any-view">
         <xs:choice>
-            <xs:element ref="Button"/>
-            <xs:element ref="CheckBox"/>
-            <xs:element ref="Container"/>
-            <xs:element ref="Dialog"/>
-            <xs:element ref="HorizontalGroup"/>
-            <xs:element ref="Image"/>
-            <xs:element ref="ImageButton"/>
-            <xs:element ref="Label"/>
-            <xs:element ref="ProgressBar"/>
-            <xs:element ref="ScrollPane"/>
-            <xs:element ref="SelectBox"/>
-            <xs:element ref="Slider"/>
-            <xs:element ref="SplitPane"/>
-            <xs:element ref="Stack"/>
-            <xs:element ref="Table"/>
-            <xs:element ref="TextArea"/>
-            <xs:element ref="TextButton"/>
-            <xs:element ref="TextField"/>
-            <xs:element ref="Touchpad"/>
-            <xs:element ref="Tree"/>
-            <xs:element ref="VerticalGroup"/>
-            <xs:element ref="Widget"/>
-            <xs:element ref="WidgetGroup"/>
-            <xs:element ref="Window"/>
+            <xs:element ref="gdx:Button"/>
+            <xs:element ref="gdx:CheckBox"/>
+            <xs:element ref="gdx:Container"/>
+            <xs:element ref="gdx:Dialog"/>
+            <xs:element ref="gdx:HorizontalGroup"/>
+            <xs:element ref="gdx:Image"/>
+            <xs:element ref="gdx:ImageButton"/>
+            <xs:element ref="gdx:Label"/>
+            <xs:element ref="gdx:ProgressBar"/>
+            <xs:element ref="gdx:ScrollPane"/>
+            <xs:element ref="gdx:SelectBox"/>
+            <xs:element ref="gdx:Slider"/>
+            <xs:element ref="gdx:SplitPane"/>
+            <xs:element ref="gdx:Stack"/>
+            <xs:element ref="gdx:Table"/>
+            <xs:element ref="gdx:TextArea"/>
+            <xs:element ref="gdx:TextButton"/>
+            <xs:element ref="gdx:TextField"/>
+            <xs:element ref="gdx:Touchpad"/>
+            <xs:element ref="gdx:Tree"/>
+            <xs:element ref="gdx:VerticalGroup"/>
+            <xs:element ref="gdx:Widget"/>
+            <xs:element ref="gdx:WidgetGroup"/>
+            <xs:element ref="gdx:Window"/>
         </xs:choice>
     </xs:group>
 
