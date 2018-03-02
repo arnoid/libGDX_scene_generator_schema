@@ -1,97 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:gdx="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
-           xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
-           vc:maxVersion="1.1"
-           vc:minVersion="1.0"
-           attributeFormDefault="unqualified"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
-           elementFormDefault="qualified">
+<xs:schema
+        xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:ns="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
+        targetNamespace="https://raw.githubusercontent.com/arnoid/libGDX_scene_generator_schema/master/schema.xsd"
+        vc:maxVersion="1.1"
+        vc:minVersion="1.1"
+        attributeFormDefault="unqualified"
+        elementFormDefault="unqualified">
 
-    <xs:element name="Button" type="gdx:Widget"/>
-    <xs:element name="CheckBox" type="gdx:Widget"/>
-    <xs:element name="Container" type="gdx:WidgetGroup"/>
-    <xs:element name="Dialog" type="gdx:WidgetGroup"/>
-    <xs:element name="HorizontalGroup" type="gdx:WidgetGroup"/>
-    <xs:element name="Image" type="gdx:Widget"/>
-    <xs:element name="ImageButton" type="gdx:Widget"/>
-    <xs:element name="Label" type="gdx:Widget"/>
-    <xs:element name="ProgressBar" type="gdx:Widget"/>
-    <xs:element name="ScrollPane" type="gdx:WidgetGroup"/>
-    <xs:element name="SelectBox" type="gdx:Widget"/>
-    <xs:element name="Slider" type="gdx:Widget"/>
-    <xs:element name="SplitPane" type="gdx:WidgetGroup"/>
-    <xs:element name="Stack" type="gdx:WidgetGroup"/>
-    <xs:element name="Table" type="gdx:WidgetGroup"/>
-    <xs:element name="TextArea" type="gdx:Widget"/>
-    <xs:element name="TextButton" type="gdx:Widget"/>
-    <xs:element name="TextField" type="gdx:Widget"/>
-    <xs:element name="Touchpad" type="gdx:Widget"/>
-    <xs:element name="Tree" type="gdx:WidgetGroup"/>
-    <xs:element name="VerticalGroup" type="gdx:WidgetGroup"/>
-    <xs:element name="Widget" type="gdx:Widget"/>
-    <xs:element name="WidgetGroup" type="gdx:WidgetGroup"/>
-    <xs:element name="Window" type="gdx:WidgetGroup"/>
+    <!-- WidgetGroup -->
+    <xs:element name="Container" type="ns:WidgetGroup"/>
+    <xs:element name="Dialog" type="ns:WidgetGroup"/>
+    <xs:element name="HorizontalGroup" type="ns:WidgetGroup"/>
+    <xs:element name="ScrollPane" type="ns:WidgetGroup"/>
+    <xs:element name="SplitPane" type="ns:WidgetGroup"/>
+    <xs:element name="Stack" type="ns:WidgetGroup"/>
+    <xs:element name="Table" type="ns:WidgetGroup"/>
+    <xs:element name="TextArea" type="ns:Widget"/>
+    <xs:element name="Tree" type="ns:WidgetGroup"/>
+    <xs:element name="VerticalGroup" type="ns:WidgetGroup"/>
+    <xs:element name="WidgetGroup" type="ns:WidgetGroup"/>
+    <xs:element name="Window" type="ns:WidgetGroup"/>
+    <!-- eof WidgetGroup -->
+
+    <!-- Widget -->
+    <xs:element name="Button" type="ns:Widget"/>
+    <xs:element name="CheckBox" type="ns:Widget"/>
+    <xs:element name="Image" type="ns:Widget"/>
+    <xs:element name="ImageButton" type="ns:Widget"/>
+    <xs:element name="Label" type="ns:Widget"/>
+    <xs:element name="ProgressBar" type="ns:Widget"/>
+    <xs:element name="SelectBox" type="ns:Widget"/>
+    <xs:element name="Slider" type="ns:Widget"/>
+    <xs:element name="TextButton" type="ns:Widget"/>
+    <xs:element name="TextField" type="ns:Widget"/>
+    <xs:element name="Touchpad" type="ns:Widget"/>
+    <xs:element name="Widget" type="ns:Widget"/>
+    <!-- eof Widget -->
+
+    <!-- Specials -->
+    <xs:element name="include" type="ns:include"/>
+    <!-- eof Specials -->
 
     <xs:group name="any-view">
         <xs:choice>
-            <xs:element ref="gdx:Button"/>
-            <xs:element ref="gdx:CheckBox"/>
-            <xs:element ref="gdx:Container"/>
-            <xs:element ref="gdx:Dialog"/>
-            <xs:element ref="gdx:HorizontalGroup"/>
-            <xs:element ref="gdx:Image"/>
-            <xs:element ref="gdx:ImageButton"/>
-            <xs:element ref="gdx:Label"/>
-            <xs:element ref="gdx:ProgressBar"/>
-            <xs:element ref="gdx:ScrollPane"/>
-            <xs:element ref="gdx:SelectBox"/>
-            <xs:element ref="gdx:Slider"/>
-            <xs:element ref="gdx:SplitPane"/>
-            <xs:element ref="gdx:Stack"/>
-            <xs:element ref="gdx:Table"/>
-            <xs:element ref="gdx:TextArea"/>
-            <xs:element ref="gdx:TextButton"/>
-            <xs:element ref="gdx:TextField"/>
-            <xs:element ref="gdx:Touchpad"/>
-            <xs:element ref="gdx:Tree"/>
-            <xs:element ref="gdx:VerticalGroup"/>
-            <xs:element ref="gdx:Widget"/>
-            <xs:element ref="gdx:WidgetGroup"/>
-            <xs:element ref="gdx:Window"/>
+            <xs:element ref="ns:Button"/>
+            <xs:element ref="ns:CheckBox"/>
+            <xs:element ref="ns:Container"/>
+            <xs:element ref="ns:Dialog"/>
+            <xs:element ref="ns:HorizontalGroup"/>
+            <xs:element ref="ns:Image"/>
+            <xs:element ref="ns:ImageButton"/>
+            <xs:element ref="ns:Label"/>
+            <xs:element ref="ns:ProgressBar"/>
+            <xs:element ref="ns:ScrollPane"/>
+            <xs:element ref="ns:SelectBox"/>
+            <xs:element ref="ns:Slider"/>
+            <xs:element ref="ns:SplitPane"/>
+            <xs:element ref="ns:Stack"/>
+            <xs:element ref="ns:Table"/>
+            <xs:element ref="ns:TextArea"/>
+            <xs:element ref="ns:TextButton"/>
+            <xs:element ref="ns:TextField"/>
+            <xs:element ref="ns:Touchpad"/>
+            <xs:element ref="ns:Tree"/>
+            <xs:element ref="ns:VerticalGroup"/>
+            <xs:element ref="ns:Widget"/>
+            <xs:element ref="ns:WidgetGroup"/>
+            <xs:element ref="ns:Window"/>
+            <xs:any processContents="lax" maxOccurs="unbounded"/>
         </xs:choice>
     </xs:group>
 
     <xs:complexType name="WidgetGroup">
         <xs:complexContent mixed="true">
-            <xs:extension base="gdx:Widget">
-                <xs:group maxOccurs="unbounded" minOccurs="0" ref="gdx:any-view"/>
+            <xs:extension base="ns:Widget">
+                <xs:group maxOccurs="unbounded" minOccurs="0" ref="ns:any-view"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="Widget">
+    <xs:complexType name="include">
+        <xs:group ref="ns:any-view"/>
+    </xs:complexType>
+
+    <xs:complexType name="Widget" mixed="true">
         <xs:attribute name="rotate" type="xs:float"/>
         <xs:attribute name="scaleX" type="xs:float"/>
         <xs:attribute name="scaleY" type="xs:float"/>
         <xs:attribute name="color" type="xs:string"/>
         <xs:attribute name="debug" type="xs:boolean"/>
-        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="name" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:minLength value="1"/>
+                    <xs:pattern value="[a-zA-Z][a-zA-Z0-9_]+"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
         <xs:attribute name="height" type="xs:float" use="required"/>
         <xs:attribute name="width" type="xs:float" use="required"/>
         <xs:attribute name="originX" type="xs:float"/>
         <xs:attribute name="originY" type="xs:float"/>
-        <xs:attribute name="originAlign" type="gdx:AlignEnum"/>
+        <xs:attribute name="originAlign" type="ns:AlignEnum"/>
         <xs:attribute name="x" type="xs:float"/>
         <xs:attribute name="y" type="xs:float"/>
         <xs:attribute name="z" type="xs:integer"/>
-        <xs:attribute name="align" type="gdx:AlignEnum"/>
+        <xs:attribute name="align" type="ns:AlignEnum"/>
         <xs:attribute name="pack" type="xs:boolean"/>
         <xs:attribute name="fillParent" type="xs:boolean"/>
         <xs:attribute name="visible" type="xs:boolean"/>
-        <xs:attribute name="touchable" type="gdx:TouchableEnum"/>
+        <xs:attribute name="touchable" type="ns:TouchableEnum"/>
     </xs:complexType>
 
     <xs:simpleType final="restriction" name="TouchableEnum">
